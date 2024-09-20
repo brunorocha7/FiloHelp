@@ -188,35 +188,42 @@
             <div class="container section-title" data-aos="fade-up">
               <div><span>Relate-aqui</span> <span class="description-title"></span></div>
             </div><!-- End Section Title -->
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200" onsubmit="return showAlert()">
               <div class="row gy-4">
-
+            
                 <div class="col-md-6">
                   <input type="text" name="name" class="form-control" placeholder="Nome" required="">
                 </div>
-
+            
                 <div class="col-md-6 ">
-                  <input type="sobrenome" class="form-control" name="email" placeholder="Sobrenome" required="">
+                  <input type="text" class="form-control" name="sobrenome" placeholder="Sobrenome" required="">
                 </div>
-
+            
                 <div class="col-md-12">
                   <input type="text" class="form-control" name="subject" placeholder="Qual a sua série?" required="" maxlength="20">
                 </div>
-
+            
                 <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Relate- aqui" required=""></textarea>
+                  <textarea class="form-control" name="message" rows="6" placeholder="Relate aqui" required=""></textarea>
                 </div>
-
+            
                 <div class="col-md-12 text-center">
                   <div class="loading">Carregando</div>
                   <div class="error-message"></div>
                   <div class="sent-message">Sua Mensagem foi enviada. Thank you!</div>
-
+            
                   <button type="submit">Relate</button>
                 </div>
-
+            
               </div>
             </form>
+            
+            <script>
+              function showAlert() {
+                alert('Relato enviado com sucesso!');
+                return true; // Permite que o formulário continue o envio
+              }
+            </script>
           </div><!-- End Contact Form -->
 
         </div>
